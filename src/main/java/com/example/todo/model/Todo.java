@@ -3,10 +3,12 @@ public class Todo {
     private Long id;
     private String description;
     private boolean isCompleted;
+    private String priority;
     // 构造函数、getter和setter省略
-    public Todo(Long id, String description) {
+    public Todo(Long id, String description,String priority) {
         this.id = id;
         this.description = description;
+        this.priority = priority;
         this.isCompleted = false;
     }
     public Long getId() {
@@ -17,6 +19,13 @@ public class Todo {
     }
     public boolean isCompleted() {
         return isCompleted;
+    }
+
+    public String getPriority() {
+        return priority;
+    }
+    public void setPriority(String priority) {
+        this.priority = priority;
     }
     public void setCompleted(boolean completed) {
         isCompleted = completed;
